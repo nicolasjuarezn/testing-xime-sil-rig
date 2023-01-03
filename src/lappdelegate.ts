@@ -324,7 +324,7 @@ function onClickBegan(e: MouseEvent): void {
   const posX: number = e.pageX;
   const posY: number = e.pageY;
 
-  LAppDelegate.getInstance()._view.onTouchesBegan(posX, posY);
+  LAppDelegate.getInstance()._view.onTouchesBegan(posX * 2, posY * 2);
 }
 
 /**
@@ -344,7 +344,7 @@ function onMouseMoved(e: MouseEvent): void {
   const posX: number = e.clientX - rect.left;
   const posY: number = e.clientY - rect.top;
 
-  LAppDelegate.getInstance()._view.onTouchesMoved(posX, posY);
+  LAppDelegate.getInstance()._view.onTouchesMoved(posX * 2, posY * 2);
 }
 
 /**
@@ -361,7 +361,7 @@ function onClickEnded(e: MouseEvent): void {
   const posX: number = e.clientX - rect.left;
   const posY: number = e.clientY - rect.top;
 
-  LAppDelegate.getInstance()._view.onTouchesEnded(posX, posY);
+  LAppDelegate.getInstance()._view.onTouchesEnded(posX * 2, posY * 2);
 }
 
 /**
@@ -378,7 +378,7 @@ function onTouchBegan(e: TouchEvent): void {
   const posX = e.changedTouches[0].pageX;
   const posY = e.changedTouches[0].pageY;
 
-  LAppDelegate.getInstance()._view.onTouchesBegan(posX, posY);
+  LAppDelegate.getInstance()._view.onTouchesBegan(posX * 2, posY * 2);
 }
 
 /**
@@ -399,7 +399,7 @@ function onTouchMoved(e: TouchEvent): void {
   const posX = e.changedTouches[0].clientX - rect.left;
   const posY = e.changedTouches[0].clientY - rect.top;
 
-  LAppDelegate.getInstance()._view.onTouchesMoved(posX, posY);
+  LAppDelegate.getInstance()._view.onTouchesMoved(posX * 2, posY * 2);
 }
 
 /**
@@ -418,7 +418,7 @@ function onTouchEnded(e: TouchEvent): void {
   const posX = e.changedTouches[0].clientX - rect.left;
   const posY = e.changedTouches[0].clientY - rect.top;
 
-  LAppDelegate.getInstance()._view.onTouchesEnded(posX, posY);
+  LAppDelegate.getInstance()._view.onTouchesEnded(posX * 2, posY * 2);
 }
 
 /**
@@ -437,5 +437,5 @@ function onTouchCancel(e: TouchEvent): void {
   const posX = e.changedTouches[0].clientX - rect.left;
   const posY = e.changedTouches[0].clientY - rect.top;
 
-  LAppDelegate.getInstance()._view.onTouchesEnded(posX, posY);
+  LAppDelegate.getInstance()._view.onTouchesEnded(posX * 2, posY * 2);
 }
